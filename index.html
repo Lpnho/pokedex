@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./style/pokedex_body.css" />
+  <link rel="stylesheet" href="./style/pokedex_buttons.css" />
+  <link rel="stylesheet" href="./style/pokedex_inner_container_display.css" />
+  <link rel="stylesheet" href="./style/pokedex_inner_container_bottom_buttons.css" />
+  <link rel="stylesheet" href="./style/pokedex_inner_lid_container.css">
+
+  <script src="./js/pokedex_color_changer.js" defer></script>
+
+  <script src="./js/pokedex_opening_animation.js" defer></script>
+
+  <script src="./js/pokedex_poke_requisition.js" defer></script>
+
+
+  <title>Pokedéx</title>
+</head>
+
+<body>
+
+
+  <div class="pokedex">
+    <div class="pokedex_container_base">
+      <!-- ----------------------------------------------------------------------------------------------------- -->
+
+      <!-- Componente Topo -->
+      <div class="pokedex_top_container">
+
+        <ul class="pokedex_colors_leds">
+          <li id="led_shadow1" class="pokedex_led pokedex_led_shadow"></li>
+          <li id="led1" class="pokedex_led"></li>
+
+          <li id="led_shadow2" class="pokedex_led pokedex_led_shadow"></li>
+          <li id="led2" class="pokedex_led"></li>
+
+          <li id="led_shadow3" class="pokedex_led pokedex_led_shadow"></li>
+          <li id="led3" class="pokedex_led"></li>
+        </ul>
+
+
+        <div id="pokedex_power_led_container_shadow" class="pokedex_power_led_container"></div>
+
+        <div class="pokedex_power_led_container">
+          <div id="pokedex_power_led_shadow"></div>
+          <div id="pokedex_power_led" onclick="OnPowerLedClicked()"></div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ----------------------------------------------------------------------------------------------------- -->
+
+      <!-- Parte Interior da Pokédex -->
+
+      <div class="pokedex_inner_container">
+        <div class="pokedex_inner_container">
+
+
+          <div class="pokedex_display_container">
+
+
+            <span id="pokedex-display-out-border" class="pokedex_display_out"></span>
+            <div class="pokedex_display_out">
+              <div class="pokedex_display_top_button_container">
+
+
+                <span class="pokedex_display_top_button"></span>
+                <span class="pokedex_display_top_button"></span>
+              </div>
+              <!-- Display -->
+              <div class="pokedex_display">
+                <div id="pokemon_image_animation_container">
+                  <img>
+                </div>
+              </div>
+
+              <span id="pokedex_display_button_border" class="pokedex_display_button"></span>
+              <div id="pokedex_start_button" onclick="StartPokedex()" class="pokedex_display_button"></div>
+              <div id="podekex_speaker_container">
+                <div class="podekex_speaker"></div>
+                <div class="podekex_speaker"></div>
+                <div class="podekex_speaker"></div>
+                <div class="podekex_speaker"></div>
+                <div class="podekex_speaker"></div>
+              </div>
+            </div>
+
+
+            <div class="pokedex_bottom_buttons_container">
+              <div id="stop_speech" class="pokedex_bottom_button"></div>
+              <div id="pokedex_bottom_button_line_01" class="pokedex_bottom_button_line"></div>
+              <div id="pokedex_bottom_button_line_02" class="pokedex_bottom_button_line"></div>
+
+
+              <div id="pokedex_green_big_bottom" class="pokedex_green_big_bottom_button"></div>
+
+              <div class="pokedex_bottom_button_container_more">
+
+                <div id="pokedex_bottom_button_more_1" class="pokedex_bottom_button_more"></div>
+                <div id="pokedex_bottom_button_more_2" class="pokedex_bottom_button_more"></div>
+                <div id="pokedex_bottom_button_more_3" class="pokedex_bottom_button_more"></div>
+                <div id="pokedex_bottom_button_more_4" class="pokedex_bottom_button_more"></div>
+                <div id="pokedex_bottom_button_more_5" class="pokedex_bottom_button_more"></div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ----------------------------------------------------------------------------------------------------- -->
+      <!-- Dobradiça -->
+      <div class="pokedex_hinge">
+        <div class="pokedex_hinge_grooves_container">
+          <span class="pokedex_hinge_grooves" id="pokedex_hinge_grooves_1"></span>
+          <span class="pokedex_hinge_grooves" id="pokedex_hinge_grooves_2"></span>
+          <span class="pokedex_hinge_grooves" id="pokedex_hinge_grooves_3"></span>
+          <span class="pokedex_hinge_grooves" id="pokedex_hinge_grooves_4"></span>
+          <span class="pokedex_hinge_grooves" id="pokedex_hinge_grooves_5"></span>
+          <span class="pokedex_hinge_grooves" id="pokedex_hinge_grooves_6"></span>
+          <span class="pokedex_hinge_grooves" id="pokedex_hinge_grooves_7"></span>
+          <span class="pokedex_hinge_grooves" id="pokedex_hinge_grooves_8"></span>
+        </div>
+      </div>
+      <!-- ----------------------------------------------------------------------------------------------------- -->
+      <!-- Tampa da Pokédex -->
+      <div id="lid" class="pokedex_inner_container pokedex_lid_closed ">
+        <div id="pokedex_inner_container_lid" class="pokedex_inner_container nocolor">
+          <div class="pokedex_lid_display_container">
+            <div class="pokedex_lid_display">
+              <input id="input_search_by_name" type="text">
+            </div>
+          </div>
+          <div class="pokedex_lid_buttons_container">
+            <div class="pokedex_lid_buttons_keyboard">
+              <div id="horizontal_row_01" class="horizontal_row"></div>
+              <div id="horizontal_row_02" class="horizontal_row"></div>
+              <div id="horizontal_row_03" class="horizontal_row"></div>
+              <div id="horizontal_row_04" class="horizontal_row"></div>
+              <div class="vertical_row"></div>
+            </div>
+            <div id="pokedex_bottom_button_line_lid_01"
+              class="pokedex_bottom_button_line pokedex_bottom_button_line_lid"></div>
+            <div id="pokedex_bottom_button_line_lid_02"
+              class="pokedex_bottom_button_line pokedex_bottom_button_line_lid"></div>
+            <div id="pokedex_bottom_button_lid_shadow" class="pokedex_bottom_button"></div>
+            <div id="pokedex_bottom_button_lid" class="pokedex_bottom_button" onclick="GetRequisition()"></div>
+
+            <div id="pokedex_bottom_button_lid_white">
+              <div id="horizontal_row_inner_white_button" class="horizontal_row"></div>
+            </div>
+
+            <div id="pokedex_bottom_button_line_lid_03" class="bottom_button_line_lid"></div>
+            <div id="pokedex_bottom_button_line_lid_04" class="bottom_button_line_lid"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

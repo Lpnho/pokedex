@@ -1,0 +1,78 @@
+.pokedex_top_container {
+  position: relative;
+}
+.pokedex_power_led_container {
+  position: absolute;
+  height: 50%;
+  width: 30%;
+  background-color: white;
+  top: 20%;
+  clip-path: circle();
+
+}
+#pokedex_power_led_container_shadow
+{
+  height: 56%;
+  width: 40%;
+  background-color: black;
+  top: 17%;
+  left: -5%;
+}
+#pokedex_power_led {
+  position: absolute;
+  top: 14%;
+  left: 5%;
+  height: 72%;
+  width: 90%;
+  clip-path: circle();
+}
+#pokedex_power_led_shadow{
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  top: 10%;
+  left: -0.2%;
+  clip-path: circle();
+  background-color: black;
+}
+.pokedex_colors_leds {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.pokedex_led {
+  width: 30%;
+  height: 30%;
+  clip-path: circle(8%);
+  position: absolute;
+  top: 5%;
+  background-color: aquamarine;
+}
+.pokedex_led_shadow {
+  width: 40%;
+  height: 40%;
+  background-color: black;
+  top: 0.1%;
+}
+#led_shadow1 {
+  left: 9%;
+}
+#led_shadow2 {
+  left: 15%;
+}
+#led_shadow3 {
+  left: 21%;
+}
+
+#led1 {
+  left: 14%;
+  background-color: red;
+}
+#led2 {
+  left: 20%;
+  background-color: yellow;
+}
+#led3 {
+  left: 26%;
+  background-color: green;
+}
