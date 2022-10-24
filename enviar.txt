@@ -1,0 +1,4 @@
+Aluno: Luiz Felipe Rodrigues Costa
+GitHub link: https://github.com/Lpnho/pokedex 
+Netlify link: https://shimmering-gecko-c4e1dd.netlify.app
+

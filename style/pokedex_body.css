@@ -6,6 +6,7 @@
   /* --pokedex-border-radio: 40px; */
 }
 /* border-radius: var(--pokedex-border-radio); */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +14,9 @@
   list-style: none;
   box-sizing: border-box;
   font-family: sans-serif;
+}
+body{
+  background-image: url(../assets/alternating-arrowhead.svg);
 }
 /* Pokedex */
 .pokedex {
